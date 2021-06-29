@@ -1,4 +1,5 @@
 import React from 'react'
+import { TouchableOpacity } from 'react-native';
 import {
     View,
     Text,
@@ -8,7 +9,8 @@ import {
 } from 'react-native'
 import {Icon} from 'react-native-elements'
 
-const Header = () => {
+const Header = (props) => {
+    console.log(props)
     return(
         <View style={styles.container}>
             <Image 
@@ -18,12 +20,18 @@ const Header = () => {
                 width : 130,
             }}
             />
+            <TouchableOpacity
+            onPress={()=>{
+                props.navigation.navigate("Message")
+            }}
+            >
             <Icon 
             name = "send"
             type = "feather"
             size={26}
             color={"#000"}
             />
+            </TouchableOpacity>
         </View>
     );
 }

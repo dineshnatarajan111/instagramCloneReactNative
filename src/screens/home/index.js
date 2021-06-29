@@ -8,10 +8,10 @@ import {
 } from 'react-native'
 import {Feed, Header} from '../../components'
 
-const Home = () => {
+const Home = (props) => {
   return(
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header {...props} />
       <ScrollView showsVerticalScrollIndicator = {false}>
         <Feed
         image = {require("../../assets/potrait.jpg")}

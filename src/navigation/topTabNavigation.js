@@ -8,6 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 const TopTabs = () => {
   return (
     <Tab.Navigator
+    backBehavior = "initialRoute"
     initialRouteName = "BottomTab"
     tabBarOptions = {{
       style: {height :'0%'}
