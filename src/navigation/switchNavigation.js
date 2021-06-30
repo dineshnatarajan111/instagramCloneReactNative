@@ -5,9 +5,9 @@ import StackNavigation from "./stackNavigation";
 
 const SwitchNavigator= createSwitchNavigator(
     {
-    //   Splash: Splash,
-    //   Signin : Signin,
-    //   Signup : Signup,
+      Splash: Splash,
+      Signin : Signin,
+      Signup : Signup,
       MainNav : StackNavigation,
     },
     {

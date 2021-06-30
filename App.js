@@ -12,15 +12,13 @@ import { Platform } from 'react-native';
 
 const App = () => {
   return(
-    // <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <StatusBar 
-        barStyle = "dark-content"
-        backgroundColor = {Platform.OS == "android" ? "#FFF" : null}
-        />
-        <SwitchNavigator />
-      </NavigationContainer>
-    // </SafeAreaView>
+    <NavigationContainer>
+      <StatusBar 
+      barStyle = "dark-content"
+      backgroundColor = {Platform.OS == "android" ? "#FFF" : null}
+      />
+      <SwitchNavigator />
+    </NavigationContainer>
   );
 }
 
