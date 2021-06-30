@@ -9,6 +9,11 @@ import Profile from './profile'
 import Messaging from './messaging'
 import Camera from './camera'
 
+import Top from './search/top'
+import Tags from './search/tags'
+import Accounts from "./search/accounts"
+import Places from "./search/places"
+
 export {
     Splash,
     Signin,
@@ -20,4 +25,8 @@ export {
     Profile,
     Messaging,
     Camera,
+    Top,
+    Accounts,
+    Places,
+    Tags,
 }

@@ -3,24 +3,29 @@ import {
   SafeAreaView,
   View,
   Text,
+  Modal,
   TextInput,
   TouchableOpacity,
   StyleSheet,
 } from 'react-native'
 import {Icon} from 'react-native-elements'
+import SearchBox from './searchBox'
 
 const Search = (props) => {
-  useEffect(()=>{
-    props.navigation.setOptions({
-      gestureEnabled : false
-    })
-  },[])
   const [searchTxt, setSearchTxt] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+  onchangeVal = (val) => {
+    setModalVisible(val);
+  }
   return(
     <SafeAreaView style={styles.container}>
+      {modalVisible ?
+      <SearchBox 
+      onchange={(val)=>onchangeVal(val)}
+      /> :
       <View style={styles.searchContainer}>
-        <View style={styles.searchBar}>
+        <TouchableOpacity 
+          onPress={()=>setModalVisible(!modalVisible)} style={styles.searchBar}>
           <View style={{alignItems : "center", justifyContent : "center"}}>
             <Icon
             name = "search"
@@ -28,21 +33,21 @@ const Search = (props) => {
             size = {20}
             color = {"#000"}
             style = {{
-                marginRight : 15
+              marginRight : 15
             }}
             />
           </View>
-          <TouchableOpacity 
-          onPress={()=>setModalVisible(!modalVisible)}
+          <View
           style = {{
             flex : 1,
             justifyContent : "center"
           }}
           >
             <Text style = {styles.txt}>Search</Text>
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
       </View>
+      }
     </SafeAreaView>
   );
 }

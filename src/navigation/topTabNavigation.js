@@ -1,7 +1,10 @@
 import React from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import BottomTabs from './bottomTabNavigation'
-import { Camera, Messaging } from '../screens';
+import { 
+  Camera, 
+  Messaging,
+} from '../screens';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -20,5 +23,6 @@ const TopTabs = () => {
     </Tab.Navigator>
   );
 }
+
 
 export default TopTabs;
