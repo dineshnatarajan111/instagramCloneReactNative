@@ -1,13 +1,11 @@
 import React,{useState} from 'react'
 import {
     View,
-    Text,
     StyleSheet,
-    SafeAreaView,
 } from 'react-native'
 import { RNCamera } from 'react-native-camera';
 
-const Camera = () => {
+const Camera = (props) => {
     const [cameraRef,setCameraRef] = useState(null);
     return(
         <View style={styles.container}>

@@ -6,13 +6,14 @@ import {
   StyleSheet,
   ScrollView,
 } from 'react-native'
-import {Feed, Header} from '../../components'
+import {Feed, Header, Status} from '../../components'
 
 const Home = (props) => {
   return(
     <SafeAreaView style={styles.container}>
       <Header {...props} />
       <ScrollView showsVerticalScrollIndicator = {false}>
+        <Status />
         <Feed
         image = {require("../../assets/potrait.jpg")}
         potrait = {true}
