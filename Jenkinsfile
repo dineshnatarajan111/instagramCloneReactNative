@@ -10,7 +10,6 @@ node{
   }
   
   stage("Pick excel"){
-    f = open("cat.xlsx", "r")
-    print(f.read())
+    readFile('cat.xlsx')
   }
 }
