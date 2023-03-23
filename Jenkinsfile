@@ -1,4 +1,6 @@
-
-print('Get current working directory : ', pwd())
-
-print("GITHUB Hook ")
+node{
+  def workspace_path
+  stage("Build"){
+    print("$env.WORKSPACE")
+  }
+}
