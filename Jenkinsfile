@@ -1,6 +1,7 @@
 node{
   def workspace_path
   stage("Build"){
-    print("$env.WORKSPACE")
+    def workspace = pwd()
+    print("$WORKSPACE")
   }
 }
