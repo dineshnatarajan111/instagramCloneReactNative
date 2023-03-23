@@ -4,7 +4,7 @@ node{
     print("$workspace")
   }
   stage("Pick excecl"){
-    def workspace = node.getWorkspaceFor("InstagramFolder/excelLoader")
+    def workspace = getWorkspaceFor("InstagramFolder/excelLoader")
     print("$workspace")
   }
 }
