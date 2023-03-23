@@ -1,5 +1,4 @@
-import os
 
-workspace_path = os.getcwd()
+env.WORKSPACE = pwd()
 
-print('Get current working directory : ', workspace_path)
+print('Get current working directory : ', env.WORKSPACE)
