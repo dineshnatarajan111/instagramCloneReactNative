@@ -5,6 +5,7 @@ node{
     print("$workspace")
   }
   stage("Pick excecl"){
-    print("$env")
+    def workspace = pwd("excelLoader")
+    print("$workspace")
   }
 }
