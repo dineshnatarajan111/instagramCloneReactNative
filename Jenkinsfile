@@ -10,6 +10,6 @@ node{
   }
   
   stage("Pick excel"){
-    input 'Hello'
+    file '/input'
   }
 }
