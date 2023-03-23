@@ -10,6 +10,12 @@ node{
   }
   
   stage("Pick excel"){
-    readFile('cat.xlsx')
+    input {
+      message 'Upload xlsx file here'
+      ok 'OK'
+      parameters {
+        file '/input'
+      }
+    }
   }
 }
