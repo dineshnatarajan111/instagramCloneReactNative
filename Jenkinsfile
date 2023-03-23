@@ -10,12 +10,6 @@ node{
   }
   
   stage("Pick excel"){
-    input {
-      message 'Upload xlsx file here'
-      ok 'OK'
-      parameters {
-        file '/input'
-      }
-    }
+    input 'Hello'
   }
 }
