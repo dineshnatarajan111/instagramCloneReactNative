@@ -3,8 +3,7 @@ node{
     def workspace = pwd()
     print("$workspace")
   }
-  stage("Pick excecl"){
-    def workspace = getWorkspaceFor("InstagramFolder/excelLoader")
-    print("$workspace")
+  stage("Pick excel"){
+    print("Hello")
   }
 }
