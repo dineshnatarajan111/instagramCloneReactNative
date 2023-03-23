@@ -11,7 +11,7 @@ node{
   
   stage("Pick excel"){
     script{
-      sh 'cd "$workspace"'
+      sh 'cd ${workspace}'
       sh 'cd ../'
       sh 'pwd'
     }
