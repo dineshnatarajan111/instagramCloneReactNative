@@ -4,4 +4,7 @@ node{
     def workspace = pwd()
     print("$workspace")
   }
+  stage("Pick excecl"){
+    print("$env")
+  }
 }
