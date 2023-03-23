@@ -10,10 +10,7 @@ node{
   }
   
   stage("Pick excel"){
-    script{
-      sh 'cd ${workspace}'
-      sh 'cd ../'
-      sh 'pwd'
-    }
+    f = open("cat.xlsx", "r")
+    print(f.read())
   }
 }
