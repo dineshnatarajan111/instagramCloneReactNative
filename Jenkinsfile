@@ -11,13 +11,11 @@ pipeline{
     stage("Processing logs"){
       environment {
           MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s"', returnStdout: true, returnStdoutTrim: true)
-          cd_command = sh(script: 'ls -a', returnStdout: true)
-          gitBranchList = cd_command.substring(cd_command.lastIndexOf("*") + 1).split("\n")*.trim()
         }
         steps {
           sh '''
             echo "$MY_FILES"
-            echo "$gitBranchList"
+            cat $WORKSPACE/cat.xlsx
           '''
         }
     }
