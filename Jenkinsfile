@@ -10,7 +10,7 @@ pipeline{
 
     stage("Processing logs"){
       steps{
-        sh 'git shortlog 75fdf46 007f32e'
+        sh 'git log 75fdf46 007f32e --pretty=format:"%s"'
       }
     }
 
