@@ -10,8 +10,8 @@ pipeline{
 
     stage("Processing logs"){
       steps{
-        res = sh 'git log 75fdf46 007f32e --pretty=format:"%s" > cat.xlsx'
-        result = readFile('cat.xlsx').trim()
+        sh 'git log 75fdf46 007f32e --pretty=format:"%s" > cat.xlsx'
+        def result = readFile('cat.xlsx').trim()
       }
     }
 
