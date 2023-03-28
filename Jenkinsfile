@@ -10,7 +10,12 @@ pipeline{
 
     stage("Processing logs"){
       steps{
-        res = sh 'git log 75fdf46 007f32e --pretty=format:"%s"'
+        // res = sh 'git log 75fdf46 007f32e --pretty=format:"%s"'
+        BUILD_FULL = sh (
+            script: "git log -1 --pretty=%B | grep '\\[jenkins-full]'",
+            returnStatus: true
+        ) == 0
+        echo "Build full flag: ${BUILD_FULL}"
       }
     }
 
