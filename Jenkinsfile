@@ -17,9 +17,11 @@ pipeline{
             git log 75fdf46 007f32e --pretty=format:"%s" > res.txt
             echo "$MY_FILES"
           '''
-          print(pwd())
-          String fileContents = new File('/res.txt').text
-          print(fileContents)
+          script{
+            print(pwd())
+            String fileContents = new File('/res.txt').text
+            print(fileContents)
+          }
         }
     }
 
