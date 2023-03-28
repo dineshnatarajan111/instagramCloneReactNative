@@ -16,6 +16,7 @@ pipeline{
           sh '''
             git log 75fdf46 007f32e --pretty=format:"%s" > res.txt
             echo "$MY_FILES"
+            ls -a
           '''
           script{
             print(pwd())
