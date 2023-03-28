@@ -14,7 +14,7 @@ pipeline{
       //   def result = readFile('cat.xlsx').trim()
       // }
       environment {
-          MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s"', returnStdout: true)
+          MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s"', returnStdout: false)
         }
         steps {
           sh '''
