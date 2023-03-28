@@ -15,7 +15,7 @@ pipeline{
         steps {
           sh '''
             echo "$MY_FILES"
-            cat $WORKSPACE/cat.xlsx
+            cat $WORKSPACE/input.xlsx
           '''
         }
     }
