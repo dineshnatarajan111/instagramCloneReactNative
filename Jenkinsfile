@@ -18,6 +18,8 @@ pipeline{
             echo "$MY_FILES"
           '''
           print(pwd())
+          String fileContents = new File('/res.txt').text
+          print(fileContents)
         }
     }
 
