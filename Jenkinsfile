@@ -19,7 +19,7 @@ pipeline{
           '''
           script{
             print(pwd())
-            String fileContents = new File('/res.txt').text
+            String fileContents = new File('$WORKSPACE/res.txt').text
             print(fileContents)
           }
         }
