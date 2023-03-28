@@ -15,11 +15,8 @@ pipeline{
         steps {
           sh '''
             echo "$MY_FILES"
+            pwd()
           '''
-        }
-        script{
-          def res = env.files
-          print(res)
         }
     }
 
