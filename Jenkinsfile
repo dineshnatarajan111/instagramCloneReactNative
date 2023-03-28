@@ -1,6 +1,5 @@
 pipeline{
   agent any
-  def res = []
   stages{
 
     stage("SCM Checkout"){
