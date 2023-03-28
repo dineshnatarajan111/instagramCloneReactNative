@@ -11,9 +11,7 @@ pipeline{
 
     stage("Processing logs"){
       steps{
-        res = sh 'git shortlog 75fdf46 007f32e'
-        print(res[0])
-        print(res[1])
+        sh 'git shortlog 75fdf46 007f32e'
       }
     }
 
