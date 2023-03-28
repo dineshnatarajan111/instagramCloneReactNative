@@ -16,7 +16,7 @@ pipeline{
         steps {
           sh '''
             echo "$MY_FILES"
-            echo "$cd_command"
+            echo "$cd_command(0)"
           '''
         }
     }
