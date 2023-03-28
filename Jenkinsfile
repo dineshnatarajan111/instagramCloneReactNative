@@ -18,7 +18,7 @@ pipeline{
         }
         steps {
           sh '''
-            echo "$MY_FILES"
+            echo "$MY_FILES[0]"
           '''
         }
     }
