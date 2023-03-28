@@ -10,12 +10,16 @@ pipeline{
 
     stage("Processing logs"){
       environment {
-          MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s"', returnStdout: true, returnStdoutTrim: true)
+          MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s" > res.txt', returnStdout: true, returnStdoutTrim: true)
         }
         steps {
           sh '''
             echo "$MY_FILES"
           '''
+        }
+        script{
+          def res = env.files
+          print(res)
         }
     }
 
