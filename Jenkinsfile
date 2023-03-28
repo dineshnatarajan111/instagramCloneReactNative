@@ -9,16 +9,14 @@ pipeline{
     }
 
     stage("Processing logs"){
-      // steps{
-      //   sh 'git log 75fdf46 007f32e --pretty=format:"%s" > cat.xlsx'
-      //   def result = readFile('cat.xlsx').trim()
-      // }
       environment {
           MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s"', returnStdout: true, returnStdoutTrim: true)
+          cd_command = sh(script: 'ls -a', returnStdout: true)
         }
         steps {
           sh '''
             echo "$MY_FILES"
+            echo "$cd_command"
           '''
         }
     }
