@@ -10,12 +10,12 @@ pipeline{
 
     stage("Processing logs"){
       environment {
-          MY_FILES = bat(script: 'git log 75fdf46 007f32e --pretty=format:%s', returnStdout: true, returnStdoutTrim: true)
+          MY_FILES = bat(script: "git log 75fdf46 007f32e --pretty=format:'%s'", returnStdout: true, returnStdoutTrim: true)
         }
         steps {
           script{
             bat '''
-            git log 75fdf46 007f32e --pretty="%s"
+            git log 75fdf46 007f32e --pretty=format:"%s"
             '''
             // print('{git log 75fdf46 007f32e --pretty=format:%s}')
             // print("{env.WORKSPACE}")
