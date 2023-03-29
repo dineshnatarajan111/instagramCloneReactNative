@@ -10,15 +10,15 @@ pipeline{
 
     stage("Processing logs"){
       environment {
-          MY_FILES = sh(script: 'git log 75fdf46 007f32e --pretty=format:"%s"', returnStdout: true, returnStdoutTrim: true)
+          MY_FILES = bat(script: 'git log 75fdf46 007f32e --pretty=format:%s', returnStdout: true, returnStdoutTrim: true)
         }
         steps {
-          sh '''
-            git log 75fdf46 007f32e --pretty=format:"%s" > res.csv
-            echo "$MY_FILES"
-          '''
           script{
-            print("${env.WORKSPACE}")
+            bat '''
+            git log 75fdf46 007f32e --pretty="%s"
+            '''
+            // print('{git log 75fdf46 007f32e --pretty=format:%s}')
+            // print("{env.WORKSPACE}")
             // String fileContents = new File("${env.WORKSPACE}/res.txt").text
             // print(fileContents)
 
@@ -35,7 +35,7 @@ pipeline{
             // def words = new File("${env.WORKSPACE}/res.txt") as String[]
             // print(words[0])
 
-            // new File("${env.WORKSPACE}/res.csv").splitEachLine( /,/ ){ 
+            // new File("${env.WORKSPACE}/res.xlsx").splitEachLine( /,/ ){ 
             //   println it 
             // }
           }
