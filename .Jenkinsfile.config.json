@@ -1,0 +1,7 @@
+{
+    "name": "InstagramClone_pipeline",
+    "params": {
+        "input.xlsx": "/Users/dineshnatarajan/Downloads/GPF_KLI_Dummy.xlsx"
+    },
+    "folder": "InstagramFolder"
+}

@@ -14,14 +14,30 @@ pipeline{
         }
         steps {
           sh '''
-            git log 75fdf46 007f32e --pretty=format:"%s" > res.txt
+            git log 75fdf46 007f32e --pretty=format:"%s" > res.csv
             echo "$MY_FILES"
-            ls -a
           '''
           script{
-            print(pwd())
-            String fileContents = new File('$WORKSPACE/res.txt').text
-            print(fileContents)
+            print("Helooo")
+            // String fileContents = new File("${env.WORKSPACE}/res.txt").text
+            // print(fileContents)
+
+            // def words = []
+            // new File( "${env.WORKSPACE}/res.txt" ).eachLine { line ->
+            //     words << line
+            // }
+
+            // // print them out
+            // words.each {
+            //     println it
+            // }
+
+            // def words = new File("${env.WORKSPACE}/res.txt") as String[]
+            // print(words[0])
+
+            new File("${env.WORKSPACE}/res.csv").splitEachLine( /,/ ){ 
+              println it 
+            }
           }
         }
     }
