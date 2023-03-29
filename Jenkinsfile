@@ -18,7 +18,7 @@ pipeline{
             echo "$MY_FILES"
           '''
           script{
-            print("Helooo")
+            print("${env.WORKSPACE}")
             // String fileContents = new File("${env.WORKSPACE}/res.txt").text
             // print(fileContents)
 
@@ -35,9 +35,9 @@ pipeline{
             // def words = new File("${env.WORKSPACE}/res.txt") as String[]
             // print(words[0])
 
-            new File("${env.WORKSPACE}/res.csv").splitEachLine( /,/ ){ 
-              println it 
-            }
+            // new File("${env.WORKSPACE}/res.csv").splitEachLine( /,/ ){ 
+            //   println it 
+            // }
           }
         }
     }
