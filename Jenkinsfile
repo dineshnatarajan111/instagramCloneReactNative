@@ -1,5 +1,5 @@
 pipeline{
-  agent any
+  agent { docker{ image 'ubuntu' } }
   stages{
 
     // stage("SCM Checkout"){
@@ -14,7 +14,7 @@ pipeline{
         }
         steps {
           sh '''
-            git log 75fdf46 007f32e --pretty=format:"%s" > res.csv
+            git log ${KLI_image} ${GPERF_image} --pretty=format:"%s" > res.csv
             echo "$MY_FILES"
           '''
           script{

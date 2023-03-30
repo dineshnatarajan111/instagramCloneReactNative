@@ -1,6 +1,10 @@
 {
     "name": "InstagramClone_pipeline",
     "params": {
+        "KLI_Branch": "",
+        "KLI_image": "75fdf46",
+        "GPERF_Branch": "",
+        "GPERF_image": "007f32e",
         "input.xlsx": "/Users/dineshnatarajan/Downloads/GPF_KLI_Dummy.xlsx"
     },
     "folder": "InstagramFolder"
