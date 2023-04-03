@@ -7,7 +7,7 @@ node{
   }
 
   stage("Load"){
-    code = load 'groovy/fileReader.groovy'
+    code = load '/groovy/flieReader.groovy'
   }
 
 
