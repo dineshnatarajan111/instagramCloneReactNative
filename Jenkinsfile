@@ -14,6 +14,10 @@ node{
     code.sample()
   }
 
+  stage("reading exce file"){
+    code.read_excel()
+  }
+
 
   // stage("SCM Checkout"){
   //   steps{
