@@ -2,6 +2,9 @@ def code
 
 node{
   
+  stage("Checkout"){
+    checkout scm
+  }
 
   stage("Load"){
     code = load 'groovy/fileReader.groovy'
