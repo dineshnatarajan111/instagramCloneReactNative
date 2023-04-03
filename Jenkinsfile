@@ -10,6 +10,10 @@ node{
     code = load 'groovy/flieReader.groovy'
   }
 
+  stage("calling function in groovy file"){
+    code.sample()
+  }
+
 
   // stage("SCM Checkout"){
   //   steps{
