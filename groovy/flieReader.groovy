@@ -13,6 +13,8 @@ import org.apache.poi.hssf.usermodel.*
 import org.apache.poi.xssf.usermodel.*
 import org.apache.poi.ss.util.*
 
+import org.codehaus.groovy.scriptom.*
+
 // def read_excel(){
 //     env.WORKSPACE = pwd()
 //     def version = readFile "${env.WORKSPACE}/GPF_KLI_Dummy.xlsx"
