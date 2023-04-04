@@ -1,3 +1,4 @@
+@Grab('org.codehaus.groovy.scriptom')
 import org.codehaus.groovy.scriptom.ActiveXObject
 
 def read_excel(){
