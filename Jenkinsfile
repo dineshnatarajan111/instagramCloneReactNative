@@ -9,14 +9,14 @@ pipeline{
     // }
 
     stage("Processing logs"){
-      environment {
-          MY_FILES = bat(script: "git log 75fdf46 007f32e --pretty=format:'%s'", returnStdout: true, returnStdoutTrim: true)
-        }
-        steps {
-          script{
-            bat '''
-            git log 75fdf46 007f32e --pretty=format:"%s"
-            '''
+      bat 'git log 75fdf46 007f32e --pretty=format:"%s"'
+      // environment {
+      //     MY_FILES = bat(script: "git log 75fdf46 007f32e --pretty=format:'%s'", returnStdout: true, returnStdoutTrim: true)
+      //   }
+        // steps {
+          // bat 'git log 75fdf46 007f32e --pretty=format:"%s"'
+          // script{
+           
             // print('{git log 75fdf46 007f32e --pretty=format:%s}')
             // print("{env.WORKSPACE}")
             // String fileContents = new File("${env.WORKSPACE}/res.txt").text
@@ -38,8 +38,8 @@ pipeline{
             // new File("${env.WORKSPACE}/res.xlsx").splitEachLine( /,/ ){ 
             //   println it 
             // }
-          }
-        }
+          // }
+        // }
     }
 
   }
